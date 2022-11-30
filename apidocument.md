@@ -74,32 +74,32 @@
 
 
 > Live api 
-# https://jewelleryapi.onrender.com
+* https://jewelleryapi.onrender.com
 
 >> Live api with routes
 > list of categories
-# https://jewelleryapi.onrender.com/category
+* https://jewelleryapi.onrender.com/category
 
 > list of jewellery
-# https://jewelleryapi.onrender.com/product
+* https://jewelleryapi.onrender.com/product
 
 > list of jewellery with respect to Categories
-# https://jewelleryapi.onrender.com/product?productId=12
+* https://jewelleryapi.onrender.com/product?productId=12
 
 > list of product wrt product id
-# https://jewelleryapi.onrender.com/filter/8
+* https://jewelleryapi.onrender.com/filter/8
 
 > list of product id wrt product price
-# https://jewelleryapi.onrender.com/filter/4?lcost=100000&&hcost=200000
+* https://jewelleryapi.onrender.com/filter/4?lcost=100000&&hcost=200000
 
 >list of product wrt category id & price
-# https://jewelleryapi.onrender.com/filter/10?lcost=100000&&hcost=200000&&categoryId=10
+* https://jewelleryapi.onrender.com/filter/10?lcost=100000&&hcost=200000&&categoryId=10
 
 >Sort on basis of Price
-# https://jewelleryapi.onrender.com/filter/9?sort=-1
+* https://jewelleryapi.onrender.com/filter/9?sort=-1
 
 > Details of product
-# https://jewelleryapi.onrender.com/details/6
+* https://jewelleryapi.onrender.com/details/6
 
 > List of orders
-# https://jewelleryapi.onrender.com/orders
+* https://jewelleryapi.onrender.com/orders
