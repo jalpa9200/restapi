@@ -28,6 +28,13 @@ app.get('/category',(req,res) => {
     })
 })
 
+app.get('/Allproduct',(req,res)=>{
+    db.collection('shopcat').find().toArray((err, result)=>{
+        if (err) throw err;
+        res.send(result)
+    })
+  })
+
 //list of jewellery with respect to Categories
 app.get('/product',(req,res) =>{
     let productId = Number(req.query.productId)

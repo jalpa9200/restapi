@@ -11,6 +11,9 @@
 > list of jewellery with respect to Categories
 * http://localhost:9800/product?productId=12
 
+> list of Allproduct Cateory
+* http://localhost:9800/Allproduct
+
 
 //Page2
 
