@@ -106,3 +106,6 @@
 
 > List of orders
 * https://jewelleryapi.onrender.com/orders
+
+>list of Allproduct Cateory
+* https://jewelleryapi.onrender.com/Allproduct
