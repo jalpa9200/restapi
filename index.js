@@ -178,10 +178,10 @@ app.get('/ProductDetails',(req,res)=>{
 
 app.get('/Details',(req,res)=>{
   let query={}
-  let p_id = Number(req.query.p_id)
-  if(p_id)
+  let p_no = Number(req.query.p_no)
+  if(p_no)
   {
-    query= {p_id:p_id}
+    query= {p_no:p_no}
   }
   else{
     query={}
