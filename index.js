@@ -52,13 +52,13 @@ app.get('/product',(req,res) =>{
 
 
 app.get('/product',(req,res)=>{
-    let productId = Number(req.query.productId);
-    let categoryId = Number(req.query.categoryId)
+    let p_no = Number(req.query.p_no);
+    let productId = Number(req.query.productId)
     let query = {}
-    if(stateId){
-        query = {state_id:stateId}
-    }else if(categoryId){
-        query = {"jewelleryTypes.category_id":categoryId}
+    if(p_no){
+        query = {p_no:p_no}
+    }else if(productId){
+        query = {product_id:productId}
     }else{
         query = {}
     }
