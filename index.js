@@ -160,13 +160,46 @@ app.get('/jewellery',(req,res)=>{
 })
 
 //page3
-app.get('/details/:proId',(req,res)=>{
-    let proId = Number(req.params.proId)
-    db.collection('product').find({category_id:proId}).toArray((err,result) => {
-        if(err) throw err;
-        res.send(result)
-    })
+app.get('/ProductDetails',(req,res)=>{
+  let query={}
+  let CategoryId = Number(req.query.CategoryId)
+  if(CategoryId)
+  {
+    query= {CategoryId:CategoryId}
+  }
+  else{
+    query={}
+  }
+  db.collection('product').find(query).toArray((err, result)=>{
+    if (err) throw err;
+    res.send(result)
+  })
 })
+
+app.get('/Details',(req,res)=>{
+  let query={}
+  let p_id = Number(req.query.p_id)
+  if(p_id)
+  {
+    query= {p_id:p_id}
+  }
+  else{
+    query={}
+  }
+  db.collection('product').find(query).toArray((err, result)=>{
+    if (err) throw err;
+    res.send(result)
+  })
+})
+
+
+// app.get('/details/:proId',(req,res)=>{
+//     let proId = Number(req.params.proId)
+//     db.collection('product').find({category_id:proId}).toArray((err,result) => {
+//         if(err) throw err;
+//         res.send(result)
+//     })
+// })
 
 
 //placeorder
