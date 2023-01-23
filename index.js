@@ -195,7 +195,7 @@ app.get('/jewellery',(req,res)=>{
 
 app.get('/details/:p_no',(req,res)=>{
     let p_no = Number(req.params.p_no)
-    db.collection('product').find({product_id:p_no}).toArray((err,result) => {
+    db.collection('product').find({p_no:p_no}).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
