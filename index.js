@@ -160,46 +160,46 @@ app.get('/jewellery',(req,res)=>{
 })
 
 //page3
-app.get('/ProductDetails',(req,res)=>{
-  let query={}
-  let CategoryId = Number(req.query.CategoryId)
-  if(CategoryId)
-  {
-    query= {CategoryId:CategoryId}
-  }
-  else{
-    query={}
-  }
-  db.collection('product').find(query).toArray((err, result)=>{
-    if (err) throw err;
-    res.send(result)
-  })
-})
-
-app.get('/Details',(req,res)=>{
-  let query={}
-  let p_no = Number(req.query.p_no)
-  if(p_no)
-  {
-    query= {p_no:p_no}
-  }
-  else{
-    query={}
-  }
-  db.collection('product').find(query).toArray((err, result)=>{
-    if (err) throw err;
-    res.send(result)
-  })
-})
-
-
-// app.get('/details/:proId',(req,res)=>{
-//     let proId = Number(req.params.proId)
-//     db.collection('product').find({category_id:proId}).toArray((err,result) => {
-//         if(err) throw err;
-//         res.send(result)
-//     })
+// app.get('/ProductDetails',(req,res)=>{
+//   let query={}
+//   let CategoryId = Number(req.query.CategoryId)
+//   if(CategoryId)
+//   {
+//     query= {CategoryId:CategoryId}
+//   }
+//   else{
+//     query={}
+//   }
+//   db.collection('product').find(query).toArray((err, result)=>{
+//     if (err) throw err;
+//     res.send(result)
+//   })
 // })
+
+// app.get('/Details',(req,res)=>{
+//   let query={}
+//   let p_no = Number(req.query.p_no)
+//   if(p_no)
+//   {
+//     query= {p_no:p_no}
+//   }
+//   else{
+//     query={}
+//   }
+//   db.collection('product').find(query).toArray((err, result)=>{
+//     if (err) throw err;
+//     res.send(result)
+//   })
+// })
+
+
+app.get('/details/:p_no',(req,res)=>{
+    let p_no = Number(req.params.p_no)
+    db.collection('product').find({product_id:p_no}).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
 
 
 //placeorder
