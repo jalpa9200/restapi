@@ -216,8 +216,8 @@ app.get('/details/:p_no',(req,res)=>{
 // })
 
 app.post('/productItem',(req,res) => {
-    if(Array.isArray(req.body.product_id)){
-        db.collection('product').find({product_id:{$in:req.body.product_id}}).toArray((err,result) => {
+    if(Array.isArray(req.body.id)){
+        db.collection('product').find({product_id:{$in:req.body.id}}).toArray((err,result) => {
             if(err) throw err;
             res.send(result)
         })
