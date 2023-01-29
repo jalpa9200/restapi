@@ -215,9 +215,10 @@ app.get('/details/:p_no',(req,res)=>{
     
 // })
 
+//placeorder
 app.post('/productItem',(req,res) => {
     if(Array.isArray(req.body.id)){
-        db.collection('product').find({product_id:{$in:req.body.id}}).toArray((err,result) => {
+        db.collection('product').find({p_no:{$in:req.body.id}}).toArray((err,result) => {
             if(err) throw err;
             res.send(result)
         })
@@ -226,7 +227,6 @@ app.post('/productItem',(req,res) => {
     }
     
 })
-
 
 //placeorder
 app.post('/placeOrder',(req,res) => {
